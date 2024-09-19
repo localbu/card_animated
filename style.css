@@ -126,6 +126,7 @@ button{
     background-color: transparent;
     border: none;
     color: red;
+    transition: 0.5s ease-in-out;
 }
 
 button{
