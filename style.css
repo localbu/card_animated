@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: green;
+    --first-color-light: lightGreen;
+    --first-color-lighten: Darkgreen;
+    --gradient-color: linear-gradient(
+            180deg,
+            Darkgreen,
+            lightGreen
+            );
+    --title-color: darkgrey;
+    --text-color: rgb(34, 66, 34);
+    --white-color: #fff;
+    --body-color: hsl(175, 100%, 99%);
+
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: "Poppins", sans-serif;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: .938rem;
+    --smaller-font-size: .75rem;
+}
+
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*=============== BASE ===============*/
+.container {
+    height: 100vh;
+    margin-inline: 1.5rem;
+    display: grid;
+    place-items: center;
+}
+
+.card {
+    position: relative;
+    width: 290px;
+    background: var(--gradient-color);
+    padding: 2.5rem 1.5rem 3.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 32px hsla(178, 55%, 20%, .15);
+
+
+}
+
+.card_img {
+    width: 90px;
+}
+
+img{
+    filter: grayscale(80%);
+    transition: 2.4s cubic-bezier(.56,1.9,.62,-0.85);
+}
+
+img:hover{
+    filter: grayscale(0%);
+}
+
+.card_border {
+    width: 124px;
+    height: 124px;
+    background-color: var(--first-color-light);
+    margin: 0 auto 1rem;
+    display: grid;
+    place-items: center;
+}
+
+.card_perfil {
+    width: 104px;
+    height: 104px;
+    background-color: var(--first-color-lighten);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.card_name,
+.card_profesion {
+    color: var(--white-color);
+}
+
+.card_name {
+    font-size: var(--h2-font-size);
+    font-weight: 600;
+    margin-bottom: .25rem;
+}
+
+.card_profesion {
+    font-size: var(--smaller-font-size);
+    font-weight: 500;
+    margin-bottom: .5rem;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    color: red;
+}
+
+button{
+    cursor: pointer;
+}
+
+
+
+
+/*=============== CARD INFO ===============*/
+.info {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    background-color: var(--white-color);
+    padding: 2.5rem 1.5rem 3.3rem;
+    clip-path: circle(16px at 250px 40px);
+    transition: clip-path 0.4s ease-in-out;
+}
+
+.info_icon {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--first-color);
+    display: inline-flex;
+    padding: 0.25rem;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.info_img {
+    width: 45px;
+}
+
+.info_border {
+    width: 64px;
+    height: 64px;
+    background-color: var(--first-color-light);
+    margin: 0 auto 1rem;
+    display: grid;
+    place-items: center;
+    transform: translateX(-3rem);
+    transition: transform 0.8s;
+}
+
+.info_perfil {
+    width: 52px;
+    height: 52px;
+    background-color: var(--first-color-lighten);
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.info_data {
+    display: grid;
+    row-gap: .8rem;
+    margin-bottom: 1.5rem;
+    transform: translateX(-4rem);
+    transition: transform 1s;
+}
+
+.info_name {
+    font-size: var(--normal-font-size);
+    color: var(--title-color);
+}
+
+.info_profession,
+.info_location {
+    font-size: var(--smaller-font-size);
+}
+
+a > span > i {
+    color: var(--first-color);
+}
+
+/* Card info animation */
+.info:hover {
+    clip-path: circle(75%);
+}
+
+.info:hover .info_icon {
+    opacity: 0;
+}
+
+.info:hover .info_border,
+.info:hover .info_data,
+.info:hover .info_social {
+    transform: translateX(0);
+}

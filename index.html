@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Animated</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="container">
+        <!-- card  -->
+        <div class="card">
+            <div class="card_border">
+                <div class="card_perfil">
+                    <img src="img/perfil.png" alt="" class="card_img">
+                </div>
+            </div>
+            <h3 class="card_name">Azzam</h3>
+            <span class="card_profesion">Full Stack Developer</span>
+
+            <div class="icon_container">
+                <div class="love_button">
+                    <button id="btn" onclick="Toggle1()">
+                        <i class='bx bxs-heart have_click'></i>
+                    </button>
+                    <span class="text">2.5k</span>
+                </div>
+            </div>
+            
+            <!-- card info -->
+            <div class="info">
+                <div class="info_icon">
+                    <i class="ri-information-2-line"></i>
+                </div>
+
+                <div class="info_border">
+                    <div class="info_perfil">
+                        <img src="img/perfil.png" alt="card image" class="info_img">
+                    </div>
+                </div>
+
+                <div class="info_data">
+                    <h3 class="info_name">Azzam Maulana Dzakwan</h3>
+                    <span class="info_profesion">Master in Full-stack development</span>
+                    <span class="info_location">Jakarta - Indonesia</span>
+                </div>
+
+                <div class="info_special">
+                    <a href="https://www.linkedin.com/in/azzam-maulana-2a7473285/" target="_blank" class="info_social_link">
+                        <span class="info_social_icon">
+                            <i class="ri-linkedin-box-line"></i>
+                        </span>
+                    </a>
+                    <a href="#" target="_blank" class="info_social_link">
+                        <span class="info_social_icon">
+                            <i class="ri-instagram-line"></i>
+                        </span>
+                    </a>
+            
+                    <a href="https://github.com/localbu" target="_blank" class="info_social_link">
+                        <span class="info_social_icon">
+                            <i class="ri-github-fill"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
